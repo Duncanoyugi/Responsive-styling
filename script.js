@@ -11,4 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         signupButton.classList.toggle("signup-active");
         loginButton.classList.remove("login-active");
     });
+     const stars = document.querySelectorAll('.ratingicons img, .icons img');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            star.classList.toggle('filled');
+        });
+    });
 });

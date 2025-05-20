@@ -72,6 +72,7 @@ body {
     padding: 5px 10px;
     margin-right: 100px;
     gap: 50px;
+    
 }
 
 .headerbuttons .login button {
@@ -79,8 +80,10 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid #fff;
     cursor: pointer;
+    color: #fff;
+    font-size: 1.2em;
 }
 
 .headerbuttons .login button:hover {
@@ -97,8 +100,10 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid #fff;
     cursor: pointer;
+    color: #fff;
+    font-size: 1.2em;
 }
 
 .headerbuttons .signup button:hover {
@@ -222,6 +227,179 @@ body {
 }
 
 .page-two {
-    background-color: #fff;
+    background-color: whitesmoke;
     min-height: 20vh;
 }
+.topcards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+     margin-top: 50px;
+     height: 200px;
+}
+.topcards .card {
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+   
+}
+.topcards .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+.topcards .card p {
+    font-size: 0.9em;
+    color: #868585;
+
+}
+.industry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    
+}
+
+.industry p {
+    font-size: 15px;
+    color: #868585;
+    margin-bottom: 20px
+} 
+.industrycard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    /*margin-top: -50px; */
+}
+.industrycard h1 {
+    font-size: 3em;
+    margin-top: 140px;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.industrycard p {
+    font-size: 20px;
+    color: #868585;
+    margin-bottom: 20px
+}
+.bottomcard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    padding: 10px 0;
+    margin-top: 100px;
+    height: 200px;
+}
+.bottomcard .leftcard, .middlecard, .rightcard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.bottomcard .images img {
+    width: 150px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+.ratingicons img, .icons img {
+    cursor: pointer;
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    filter: drop-shadow(0 0 0 #FFD700) drop-shadow(0 0 1px #FFD700); /* Gold outline effect */
+    -webkit-filter: drop-shadow(0 0 0 #FFD700) drop-shadow(0 0 1px #FFD700); /* Safari support */
+    background-color: transparent; /* Ensures no fill */
+}
+
+.ratingicons img.filled, .icons img.filled {
+    filter: brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(888%) hue-rotate(2deg) brightness(96%) contrast(93%); /* Gold fill */
+    -webkit-filter: brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(888%) hue-rotate(2deg) brightness(96%) contrast(93%); /* Safari support */
+    background-color: transparent;
+}
+.vectors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    padding: 10px 0;
+    margin-top: 100px;
+}
+.vector img {
+    width: 70px; 
+    height: auto; 
+    object-fit: cover;
+    gap: 20px;  
+}
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #1E3A8A, #6B21A8, #DB2777); /* Gradient from blue to purple to pink */
+    padding: 20px 40px; 
+    border-radius: 10px; 
+    margin: 20px auto;
+    max-width: 1000px; 
+}
+
+.topic h3 {
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5; 
+    font-weight: bold;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.input input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+    font-size: 1em;
+    color: #666;
+}
+
+.input button {
+    padding: 10px 20px;
+    background-color: #1E90FF; /* Bright blue for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input button:hover {
+    background-color: #1C86EE; /* Slightly darker blue on hover */
+}
+
