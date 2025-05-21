@@ -194,11 +194,13 @@ body {
     margin-top: -100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 5px;
+    justify-content: center;
+    gap: 50px;
     padding: 20px 0;
     background: none;
+    cursor: pointer;
 }
+
 
 .card {
     background-color: #fff;
@@ -209,9 +211,10 @@ body {
     text-align: center;
 }
 
-.card:nth-child(3) {
+.card:hover{
     background-color: #1a73e8;
     color: #fff;
+
 }
 
 .card h3 {
@@ -223,8 +226,8 @@ body {
     color: #666;
 }
 
-.card:nth-child(3) p {
-    color: #ddd;
+.card p:hover{
+    color: black;
 }
 
 .page-two {
@@ -579,116 +582,317 @@ body {
     background-color: #2563EB; 
 }
 .location {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px;
-    margin-top: 100px;
-    background-color: #1A2A44; 
-    margin-bottom: 50px;
-    position: relative;
-    min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  margin-top: 100px;
+  background-color: #1A2A44;
+  box-sizing: border-box; 
+  max-width: 100%; 
+  height: 110vh;
+  position: relative;
+  margin-bottom: 400px;
 }
 
 .locationcard {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    max-width: 40%; 
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box; 
 }
 
 .locationcard h2 {
-    color: white;
-    font-size: 2.5em;
-    line-height: 1.2;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .locationcard p {
-    color: #d1d5db; 
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 0; 
+  color: #d1d5db;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .map {
-    position: static; 
-    width: 50%; 
-    height: auto; 
-    margin-left: 20px; 
-    z-index: 0; 
+  flex: 1 1 45%;
+  max-width: 45%;
+    padding: 20px;
 }
 
-
-map img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.map img {
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
 }
+
 
 .family-photo {
-    z-index: 1; 
-    margin-top: 20px;
-    max-width: 40%;
+  max-width: 40%;
+  margin-top: 20px;
 }
 
 .family-photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%; 
+  height: auto;
+  border-radius: 10px;
 }
 
-/*.appointment-form {
-    
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    margin-left: auto; 
+.appointmentcard {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 700px; 
+  margin: 0 auto; 
+  background-color: white;
+  border-radius: 10px; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  margin-bottom: 50px;
+ 
 }
 
-.appointment-form h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #1a1a1a;
+.image {
+  flex: 1 1 40%; 
+  max-width: 40%;
 }
 
-.appointment-form form {
+.image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+}
+
+.bookingform {
+  flex: 1 1 55%; 
+  max-width: 55%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.bookingform h2 {
+  font-size: 1.8em;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.form-group select {
+  appearance: none; /* Removes default dropdown arrow */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="%23333"/></svg>')
+    no-repeat right 10px center; /* Custom dropdown arrow */
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.bookingform button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e90ff; /* Blue button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bookingform button:hover {
+  background-color: #1c86ee; /* Slightly darker blue on hover */
+}
+
+.contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 15px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; 
+    
 }
 
-.appointment-form label {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.appointment-form input,
-.appointment-form select {
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 1em;
-    color: #666;
+.topcontact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    max-width: 900px; 
+    margin-bottom: 50px;
+    padding: 20px 0;
+    
 }
 
-.appointment-form button {
-    padding: 10px;
-    background-color: #1E90FF;
+.topcontact .lefttop {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left; 
+}
+
+.topcontact .lefttop h2 {
+    font-size: 20px; 
+    font-weight: bold;
+    color: #333; 
+    margin: 0;
+}
+
+.topcontact .lefttop p {
+    color: #666; 
+    font-size: 14px;
+    margin: 0;
+}
+
+.topcontact .righttop button {
+    width: auto; 
+    padding: 10px 20px; 
+    background-color: #1DA1F2;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 14px; 
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase; 
 }
 
-.appointment-form button:hover {
-    background-color: #1C86EE;
-} */
+.topcontact .righttop button:hover {
+    background-color: #19db63; 
+}
+
+.bottomcontact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px; 
+    padding: 20px 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    background-color: #fff;
+}
+
+.companyinfo, .legal, .features, .resources, .GetInTouch {
+    flex: 1; 
+    text-align: left;
+    padding: 0 20px; 
+}
+
+.companyinfo h3, .legal h3, .features h3, .resources h3, .GetInTouch h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.companyinfo ul, .legal ul, .features ul, .resources ul, .GetInTouch ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.companyinfo ul li, .legal ul li, .features ul li, .resources ul li, .GetInTouch ul li {
+    margin-bottom: 10px;
+}
+
+.companyinfo ul li a, .legal ul li a, .features ul li a, .resources ul li a, .GetInTouch ul li a {
+    color: #1DA1F2; 
+    font-size: 15px; 
+    text-decoration: none;
+}
+
+.companyinfo ul li a:hover, .legal ul li a:hover, .features ul li a:hover, .resources ul li a:hover, .GetInTouch ul li a:hover {
+    text-decoration: underline; 
+}
+
+.GetInTouch ul li {
+    display: flex;
+    align-items: center;
+}
+
+.GetInTouch ul li i {
+    margin-right: 10px;
+    color: #1DA1F2;
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px; 
+    background-color: white; 
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.footer1 {
+    flex: 1;
+    text-align: left; 
+}
+
+.footer1 p {
+    margin: 0;
+    font-size: 1em; 
+    color: #666; 
+    font-style: italic; 
+}
+
+.footer2 {
+    flex: 1;
+    text-align: right; 
+}
+
+.footer2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+}
+
+.footer2 ul li {
+    display: inline-block;
+}
+
+.footer2 ul li img {
+    width: 16px;
+    height: 16px; 
+    filter: brightness(0) saturate(100%) invert(46%) sepia(12%) saturate(200%) hue-rotate(165deg); 
+}
